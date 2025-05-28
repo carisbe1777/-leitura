@@ -1,3 +1,3 @@
-function sei la{
-  
+function oii() {
+  console.log("oiiiiiiieeee");
 }
