@@ -1,4 +1,3 @@
-import { asTablesStr } from 'node-pg-migrate/operations/grants/shared';
 
 /**
  * @type {import('node-pg-migrate').ColumnDefinitions | undefined}
