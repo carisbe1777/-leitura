@@ -17,4 +17,4 @@ async function consultarTops() {
   return resultados;
 
 }
- module.exports(consultarTodos, consultarTops)
+ module.exports = {  consultarTodos, consultarTops}
