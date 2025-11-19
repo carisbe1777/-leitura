@@ -18,3 +18,14 @@ async function consultaTops() {
 
 }
  module.exports = {  consultarTodos, consultaTops}
+ 
+async function consultaMaisAdquiridos() {
+  const sql = `SELECT * FROM livro WHERE livros_mais_adquiridos  = true`;
+
+  const resultados = await query(sql)
+
+  return resultados;
+
+}
+ module.exports = {  consultarTodos, consultaTops, consultaMaisAdquiridos}
+
