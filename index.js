@@ -6,6 +6,8 @@ const app = express();
 app.get("/", async function (req, res) {
   const livrosTops = await livroRepository.consultaTops();
   const livrosMaisAdquiridos = await livroRepository.consultaMaisAdquiridos();
+
+  
 let itensTops = "";
   for (livro of livrosTops) {
     itensTops += `<li>${livro.titulo}</li>`;
@@ -33,6 +35,10 @@ let itensTops = "";
     <p>Itens mais adquiridos</p>
     <ul>
     ${itensMaisAdquiridos}
+    </ul>
+    <p>Itens mais curtidos</p>
+    <ul>
+   ${itensMaisCurtidos}
     </ul>
   </body>
 </html>`;
