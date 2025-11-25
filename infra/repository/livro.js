@@ -18,11 +18,11 @@ async function consultaMaisAdquiridos() {
   return resultados;
 }
 
-async function consultaCurtidas() {
+async function consultaMaisCurtidos() {
   const sql = `SELECT * FROM livro ORDER BY curtidas DESC LIMIT 5`;
   const resultados = await query(sql)
   return resultados;
 }
 
- module.exports = {  consultarTodos, consultaTops, consultaMaisAdquiridos, consultaCurtidas}
+ module.exports = {  consultarTodos, consultaTops, consultaMaisAdquiridos, consultaMaisCurtidos}
 

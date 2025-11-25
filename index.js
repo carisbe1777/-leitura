@@ -6,6 +6,7 @@ const app = express();
 app.get("/", async function (req, res) {
   const livrosTops = await livroRepository.consultaTops();
   const livrosMaisAdquiridos = await livroRepository.consultaMaisAdquiridos();
+  const livrosMaisCurtidos = await livroRepository.consultaMaisCurtidos();
 
   
 let itensTops = "";
@@ -17,6 +18,12 @@ let itensTops = "";
   for (livro of livrosMaisAdquiridos) {
     itensMaisAdquiridos += `<li>${livro.titulo}</li>`;
   }
+
+  let itensMaisCurtidos = "";
+  for (livro of livrosMaisCurtidos) {
+    itensMaisCurtidos += `<li>${livro.titulo}</li>`;
+  }
+
 
   let html = `<!DOCTYPE html>
 <html lang="en">
